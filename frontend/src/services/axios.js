@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: "https://sarwesh.pythonanywhere.com/",
 });
 
 // Function to refresh the access token using the refresh token
@@ -12,7 +12,7 @@ const refreshToken = async () => {
     throw new Error("Refresh token not available");
   }
 
-  const response = await axios.post("http://127.0.0.1:8000/refresh/", { refresh });
+  const response = await axios.post("https://sarwesh.pythonanywhere.com/refresh/", { refresh });
 
   if (response.data.access) {
     localStorage.setItem("access_token", response.data.access);
