@@ -1,0 +1,86 @@
+/* Container holding the expense cards */
+.expense-cards-container {
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Grid layout for the cards */
+  .expense-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  }
+  
+  /* Styling each expense card */
+  .expense-card {
+    background: linear-gradient(135deg, #f6f6f6, #e0e0e0);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    line-height: 1.8; /* Improved line height for better spacing */
+  }
+  
+  /* Hover effects */
+  .expense-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Adding a header text style within the card */
+  .expense-card h4 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    line-height: 1.8; /* Space out the title a little more */
+  }
+  
+  .expense-card:hover h4 {
+    color: #1d5a75; /* Slightly different color on hover for heading */
+  }
+  
+  /* Accent styling for the card content (Amount, Description, Date, Category) */
+  .expense-card p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+    line-height: 1.6; /* Line spacing for paragraph content */
+  }
+  
+  .expense-card p span {
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4; /* Slight space for stronger emphasis on span content */
+  }
+
+  #card-btn{
+    width: auto;
+  }
+  #ins-view-btn{
+    left: 0;
+    top:0;
+  }
+  
+  /* Responsive typography for smaller devices */
+  @media (max-width: 600px) {
+    .expense-card {
+      padding: 20px;
+    }
+  
+    .expense-card h4 {
+      font-size: 1.1rem;
+      line-height: 1.4; /* Adjust line height in small screens */
+    }
+  
+    .expense-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+  
+  
